@@ -1,3 +1,4 @@
+import { TituloModule } from './titulo/titulo.module';
 import { ChipModule } from './chip/chip.module';
 import { FiltroModule } from './filtro/filtro.module';
 import { DialogModule } from './dialog/dialog.module';
@@ -12,14 +13,16 @@ import { CommonModule } from '@angular/common';
     CardModule,
     DialogModule,
     FiltroModule,
-    ChipModule
+    ChipModule,
+    TituloModule
   ],
   exports:[
     CommonModule,
     CardModule,
     DialogModule,
     FiltroModule,
-    ChipModule
+    ChipModule,
+    TituloModule
   ]
 })
 export class ComponentsModule { }

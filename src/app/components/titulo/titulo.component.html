@@ -1,0 +1,23 @@
+<div class="titulo">
+  <h2><ng-content></ng-content></h2>
+  <div *ngIf="utilizaAcoes">
+    <button
+      *ngIf="!temValor"
+      mat-flat-button
+      color="primary"
+      class="mat-button-icon"
+      (click)="onBuscar()"
+    >
+      <mat-icon class="icon-16">search</mat-icon>
+    </button>
+    <button
+      *ngIf="temValor"
+      mat-flat-button
+      color="primary"
+      class="mat-button-icon"
+      (click)="onCancelar()"
+    >
+      <mat-icon class="icon-16">close</mat-icon>
+    </button>
+  </div>
+</div>
