@@ -1,0 +1,241 @@
+// -----------------------------------------------------------------------------
+// BORDER HELPERS
+// -----------------------------------------------------------------------------
+$border-style: 1px solid rgba(0, 0, 0, 0.12);
+
+.border,
+.b {
+  border: $border-style;
+}
+
+.border-top,
+.bt {
+  border-top: $border-style;
+}
+
+.border-right,
+.br {
+  border-right: $border-style;
+}
+
+.border-bottom,
+.bb {
+  border-bottom: $border-style;
+}
+
+.border-left,
+.bl {
+  border-left: $border-style;
+}
+
+.border-horizontal,
+.b-x {
+  border-left: $border-style;
+  border-right: $border-style;
+}
+
+.border-vertical,
+.by {
+  border-top: $border-style;
+  border-bottom: $border-style;
+}
+
+// -----------------------------------------------------------------------------
+// TEXT HELPERS
+// -----------------------------------------------------------------------------
+.text-center {
+  text-align: center !important;
+}
+.text-left {
+  text-align: left !important;
+}
+.text-right {
+  text-align: right !important;
+}
+
+// -----------------------------------------------------------------------------
+// BORDER RADIUS HELPERS
+// -----------------------------------------------------------------------------
+.border-radius-100 {
+  border-radius: 100%;
+}
+
+.border-radius-0 {
+  border-radius: 0;
+}
+
+.border-radius-2 {
+  border-radius: 2px;
+}
+
+.border-radius-4 {
+  border-radius: 4px;
+}
+
+.border-radius-8 {
+  border-radius: 8px;
+}
+
+.border-radius-16 {
+  border-radius: 16px;
+}
+
+// -----------------------------------------------------------------------------
+// CURSOR HELPERS
+// -----------------------------------------------------------------------------
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-default {
+  cursor: default;
+}
+
+// -----------------------------------------------------------------------------
+// ICONS
+// -----------------------------------------------------------------------------
+@for $index from 0 through 24 {
+  $size: $index * 4;
+  $length: #{$size}px;
+
+  .icon-#{$size} {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: $length !important;
+    width: $length !important;
+    height: $length !important;
+  }
+}
+
+.mat-button-icon {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 28px !important;
+  height: 28px !important;
+  padding: 0 !important;
+  min-width: 0 !important;
+  border-radius: 100px !important;
+}
+
+.mat-button-icon-36 {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 36px !important;
+  height: 36px !important;
+  padding: 0 !important;
+  min-width: 0 !important;
+  border-radius: 100px !important;
+}
+
+// -----------------------------------------------------------------------------
+// SPACING HELPERS
+// -----------------------------------------------------------------------------
+
+@each $prop, $abbrev in (margin: m, padding: p) {
+  @for $index from 0 through 64 {
+    $size: $index * 4;
+    $length: #{$size}px;
+
+    .#{$abbrev}-#{$size} {
+      #{$prop}: $length !important;
+    }
+  }
+
+  @for $index from 0 through 64 {
+    $size: $index * 4;
+    $length: #{$size}px;
+
+    .#{$abbrev}x-#{$size} {
+      #{$prop}-right: $length !important;
+      #{$prop}-left: $length !important;
+    }
+
+    .#{$abbrev}y-#{$size} {
+      #{$prop}-top: $length !important;
+      #{$prop}-bottom: $length !important;
+    }
+  }
+
+  @for $index from 0 through 64 {
+    $size: $index * 4;
+    $length: #{$size}px;
+
+    .#{$abbrev}t-#{$size} {
+      #{$prop}-top: $length !important;
+    }
+
+    .#{$abbrev}r-#{$size} {
+      #{$prop}-right: $length !important;
+    }
+
+    .#{$abbrev}b-#{$size} {
+      #{$prop}-bottom: $length !important;
+    }
+
+    .#{$abbrev}l-#{$size} {
+      #{$prop}-left: $length !important;
+    }
+  }
+
+  @if ($abbrev == m) {
+    // Some special margin utils for flex alignments
+    .m-auto {
+      margin: auto !important;
+    }
+
+    .mt-auto {
+      margin-top: auto !important;
+    }
+
+    .mr-auto {
+      margin-right: auto !important;
+    }
+
+    .mb-auto {
+      margin-bottom: auto !important;
+    }
+
+    .ml-auto {
+      margin-left: auto !important;
+    }
+
+    .mx-auto {
+      margin-right: auto !important;
+      margin-left: auto !important;
+    }
+
+    .my-auto {
+      margin-top: auto !important;
+      margin-bottom: auto !important;
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------------------------------
+// @ Size helpers
+// -----------------------------------------------------------------------------------------------------
+@each $prop, $abbrev in (height: h, width: w) {
+  @for $index from 0 through 180 {
+    $size: $index * 4;
+    $length: #{$size}px;
+
+    .#{$abbrev}-#{$size} {
+      #{$prop}: $length !important;
+      min-#{$prop}: $length !important;
+      max-#{$prop}: $length !important;
+    }
+  }
+
+  // Percentage
+  @for $i from 0 through 20 {
+    $i-p: 5 * $i;
+    $size-p: 5% * $i;
+
+    .#{$abbrev}-#{$i-p}-p {
+      #{$prop}: $size-p !important;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/theming";
+@import "./scss/theming";
+
+@import "./scss/colors";
+@import "./scss/typography";
+@import "./scss/helpers";
+@import "./scss/custom";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 0.5px;
+}
+
+html,
+body {
+  height: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 1.6rem;
+  // color: $primary-text;
+}
+
+h1,
+h2,
+h3 {
+  padding: 0;
+  margin: 0 !important;
+  line-height: normal !important;
+  letter-spacing: 1.25px !important;
+  text-transform: uppercase;
+  font-weight: bold !important;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

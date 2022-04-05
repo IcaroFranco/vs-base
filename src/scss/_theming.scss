@@ -1,0 +1,45 @@
+@import "~@angular/material/theming";
+
+@include mat-core();
+
+// Custom color maps
+$mat-white: (
+  500: white,
+  contrast: (
+    500: $black-87-opacity,
+  ),
+);
+
+$mat-black: (
+  500: black,
+  contrast: (
+    500: white,
+  ),
+);
+
+$vs-sales: (
+  300: #fd526d,
+  500: #c40c42,
+  700: #8c001c,
+  contrast: (
+    300: #fafafa,
+    500: #fafafa,
+    700: #fafafa,
+  ),
+);
+
+$primary: mat-palette($vs-sales, 500);
+$accent: mat-palette($vs-sales, 700);
+$warn: mat-palette($mat-red);
+
+$theme: mat-light-theme(
+  (
+    color: (
+      primary: $primary,
+      accent: $accent,
+      warn: $warn,
+    ),
+  )
+);
+
+@include angular-material-theme($theme);
