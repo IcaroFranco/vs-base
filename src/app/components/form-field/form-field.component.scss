@@ -1,0 +1,19 @@
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  * {
+    width: 100%;
+  }
+
+  .cabecalho {
+    display: flex;
+    align-items: center;
+    min-height: 24px;
+  }
+  .conteudo {
+    display: flex;
+    gap: 8px;
+  }
+}
