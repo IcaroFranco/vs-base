@@ -1,0 +1,22 @@
+@use "../../../../scss/custom" as *;
+
+a,
+span {
+  margin: 0px 4px 0px 0px;
+  font-size: 2.4rem;
+  color: $primary-text;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.hasLink {
+  &:hover {
+    cursor: pointer;
+    color: $secondary-text-normal;
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+}

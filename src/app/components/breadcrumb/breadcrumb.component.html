@@ -1,0 +1,14 @@
+<div class="breadcrumb">
+  <button mat-flat-button class="mat-button-icon-36" (click)="goBack()">
+    <mat-icon color="primary">chevron_left</mat-icon>
+  </button>
+
+  <div class="links">
+    <vs-breadcrumb-item
+      *ngFor="let breadcrumb of breadcrumbs"
+      [href]="breadcrumb.href"
+    >
+      {{ breadcrumb.label }}
+    </vs-breadcrumb-item>
+  </div>
+</div>

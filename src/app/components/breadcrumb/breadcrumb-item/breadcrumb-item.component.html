@@ -1,0 +1,6 @@
+<div class="link">
+  <a (click)="navigate()" [class.hasLink]="href">
+    <ng-content></ng-content>
+  </a>
+  <span *ngIf="href"> / </span>
+</div>

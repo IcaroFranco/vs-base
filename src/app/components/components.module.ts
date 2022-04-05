@@ -1,3 +1,4 @@
+import { BreadcrumbModule } from './breadcrumb/breadcrumb.module';
 import { TituloModule } from './titulo/titulo.module';
 import { ChipModule } from './chip/chip.module';
 import { FiltroModule } from './filtro/filtro.module';
@@ -14,15 +15,17 @@ import { CommonModule } from '@angular/common';
     DialogModule,
     FiltroModule,
     ChipModule,
-    TituloModule
+    TituloModule,
+    BreadcrumbModule,
   ],
-  exports:[
+  exports: [
     CommonModule,
     CardModule,
     DialogModule,
     FiltroModule,
     ChipModule,
-    TituloModule
-  ]
+    TituloModule,
+    BreadcrumbModule,
+  ],
 })
-export class ComponentsModule { }
+export class ComponentsModule {}
