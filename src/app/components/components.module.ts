@@ -1,21 +1,22 @@
+import { FiltroModule } from './filtro/filtro.module';
 import { DialogModule } from './dialog/dialog.module';
 import { CardModule } from './card/card.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
     CardModule,
-    DialogModule
+    DialogModule,
+    FiltroModule
   ],
   exports:[
     CommonModule,
     CardModule,
-    DialogModule
+    DialogModule,
+    FiltroModule
   ]
 })
 export class ComponentsModule { }

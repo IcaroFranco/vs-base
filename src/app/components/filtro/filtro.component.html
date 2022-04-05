@@ -1,0 +1,16 @@
+<div class="titulo">
+  <mat-icon>tune</mat-icon>
+  <h1>filtros</h1>
+  <button mat-icon-button color="primary" (click)="onFechar()">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+<div class="content">
+  <ng-content></ng-content>
+</div>
+<div class="botoes">
+  <button mat-flat-button color="primary" (click)="onAplicar()">Aplicar</button>
+  <button mat-stroked-button color="primary" (click)="onResetar()">
+    Resetar
+  </button>
+</div>
