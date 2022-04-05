@@ -1,0 +1,7 @@
+<div class="title" *ngIf="icone || titulo">
+  <mat-icon *ngIf="icone">{{ icone }}</mat-icon>
+  <h1 *ngIf="titulo">{{ titulo }}</h1>
+</div>
+<div class="content">
+  <ng-content></ng-content>
+</div>

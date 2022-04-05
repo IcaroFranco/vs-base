@@ -1,0 +1,27 @@
+@use "../../../scss/custom" as *;
+
+:host{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 32px;
+  border-radius: 4px;
+  color: $primary-text;
+  background-color: $bg-card;
+
+  .title{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    mat-icon{
+      color: $cliente-primary;
+    }
+  }
+
+  .content{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
