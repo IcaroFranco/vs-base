@@ -1,0 +1,65 @@
+@use "../../../scss/custom" as *;
+
+:host {
+  @extend .container;
+
+  height: 100%;
+  width: 100%;
+  color: $secondary-text-normal;
+  // background-color: #fff;
+  // border-radius: 8px;
+
+  .conteudo {
+    @extend .container;
+
+    gap: 16px;
+    padding: 32px;
+
+    .topo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .titulo {
+        font-size: 3.2rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: $primary-text;
+      }
+    }
+
+    .container {
+      gap: 8px;
+    }
+  }
+
+  .botoes {
+    display: flex;
+
+    button {
+      height: 48px;
+      width: 100%;
+
+      &:first-child {
+        border-radius: 0px 0px 0px 8px;
+      }
+      &:last-child {
+        border-radius: 0px 0px 8px 0px;
+      }
+    }
+  }
+}
+
+:host ::ng-deep {
+  .confirmar .mat-button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .cancelar:disabled {
+    border-right: 0px;
+    border-bottom: 0px;
+  }
+}

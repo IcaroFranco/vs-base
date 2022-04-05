@@ -1,3 +1,4 @@
+import { DialogModule } from './dialog/dialog.module';
 import { CardModule } from './card/card.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -8,11 +9,13 @@ import { CommonModule } from '@angular/common';
   declarations: [],
   imports: [
     CommonModule,
-    CardModule
+    CardModule,
+    DialogModule
   ],
   exports:[
     CommonModule,
-    CardModule
+    CardModule,
+    DialogModule
   ]
 })
 export class ComponentsModule { }
