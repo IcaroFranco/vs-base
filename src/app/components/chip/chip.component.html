@@ -1,0 +1,10 @@
+<div
+  class="item"
+  [ngClass]="{ primary: color === 'primary', bgItem: color === 'bg-item' }"
+>
+  <div>
+    {{ item.indice }}&nbsp;
+    <span>{{ item.valor }}</span>
+  </div>
+  <mat-icon class="cancelar" (click)="onCancelar()">close</mat-icon>
+</div>

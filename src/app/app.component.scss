@@ -4,4 +4,10 @@
   padding: 32px;
   background-color: tomato;
   height: 100%;
+
+
+  .content{
+    display: flex;
+    gap: 8px;
+  }
 }

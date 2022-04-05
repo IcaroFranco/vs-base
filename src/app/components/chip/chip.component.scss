@@ -1,0 +1,44 @@
+@use "../../../scss/custom" as *;
+
+.item {
+  display: flex;
+  padding: 0 4px 0 8px;
+  gap: 4px;
+  height: 24px;
+  align-items: center;
+  font-size: 1.2rem;
+  background-color: $bg-item;
+
+  div {
+    display: flex;
+    flex-wrap: nowrap;
+    font-weight: normal;
+
+    span {
+      font-weight: bold;
+      white-space: nowrap;
+    }
+  }
+
+  .cancelar {
+    width: 16px !important;
+    height: 16px !important;
+    font-size: 16px !important;
+    cursor: pointer;
+  }
+
+  &.primary {
+    background-color: $cliente-primary;
+    color: #fff;
+  }
+
+  &.bgItem {
+    background-color: $bg-item;
+
+    .cancelar {
+      &:hover {
+        color: $cliente-primary;
+      }
+    }
+  }
+}
